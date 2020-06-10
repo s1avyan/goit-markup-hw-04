@@ -171,6 +171,7 @@ main .container {
 // гейрой
 .hero {
   height: 600px;
+  max-height: 1600px;
   color: var(--accent-text-color);
   background-image: url("../images/hero/hero-canvas.jpg");
   background-repeat: no-repeat;
