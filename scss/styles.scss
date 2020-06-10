@@ -10,7 +10,11 @@ ul {
 a {
   text-decoration: none;
 }
-
+*:hover,
+*:active,
+*:focus {
+  outline: none;
+}
 :root {
   // Настройки цвета фразовых элементов
   // основной цвет текста
@@ -100,15 +104,31 @@ nav * {
 nav > address {
   justify-self: end;
 }
-
+header .icon {
+  --color4: #757575;
+  margin-right: 5px;
+}
+header .icon:hover,
+header .icon:active,
+header .icon:focus {
+  --color4: var(--active-text-color);
+  margin-right: 5px;
+}
 .logo {
   color: var(--secondary-text-color);
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
-  line-height: 31px;
+  line-height: 1.19;
   letter-spacing: 0.03em;
+}
+
+.logo:hover,
+.logo:active,
+.logo:focus {
+  transform: scale(1.05);
+  transition: 0.07s;
 }
 .nav .logo {
   margin-right: 85px;
@@ -128,12 +148,14 @@ header .contact {
   color: var(--primary-text-color);
 }
 .contact:hover,
-.contact:active {
+.contact:active,
+.contact:focus {
   color: var(--active-text-color);
 }
 
 .nav-link:hover,
-.nav-link:active {
+.nav-link:active,
+.nav-link:focus {
   color: var(--active-text-color);
   border-top: 4px solid var(--accent-text-color);
   border-bottom: 4px solid var(--active-text-color);
@@ -162,7 +184,7 @@ main .container {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 44px;
-  line-height: 60px;
+  line-height: 1.36;
 }
 .hero a {
   height: 50px;
@@ -175,10 +197,13 @@ main .container {
   justify-content: center;
   letter-spacing: 0.06em;
 }
-.hero a:hover {
-  background-color: transparent;
+.hero a:hover,
+.hero a:active,
+.hero a:focus {
+  transform: scale(1.05);
+  transition: 0.07s;
   border: 1px solid #fff;
-  font-size: 20px;
+  font-size: 18px;
 }
 .hero .wrap {
   width: 100%;
@@ -246,11 +271,13 @@ main .container {
 }
 .team h3 {
   padding-top: 30px;
+  font-weight: 500;
 }
 .team p {
   padding-top: 10px;
   padding-bottom: 16px;
   text-align: center;
+  font-size: 16px;
 }
 .team li {
   padding-bottom: 24px;
@@ -270,11 +297,19 @@ main .container {
   width: 44px;
   border-radius: 50%;
 }
-
 .team .row a:hover,
 .team .row a:active,
 .team .row a:focus {
   background-color: var(--active-text-color);
+}
+.icon {
+  align-self: center;
+  --color2: #afb1b8;
+}
+.team .icon:hover,
+.team .icon:active,
+.team .icon:focus {
+  --color2: #ffffff;
   outline: none;
 }
 // партнеры
@@ -287,8 +322,15 @@ main .container {
   border-radius: 4px;
 }
 
-.partners a:hover {
+.partners a:hover,
+.partners a:active,
+.partners a:focus {
   border: 1px solid var(--active-text-color);
+}
+.partners .icon:hover,
+.partners .icon:active,
+.partners .icon:focus {
+  --color2: var(--active-text-color);
 }
 // подвал
 footer {
@@ -309,7 +351,7 @@ footer p {
 footer b {
   display: inline-block;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--accent-text-color);
@@ -352,10 +394,13 @@ footer .row > * {
   justify-content: center;
   fill: #ffffff;
 }
-.subscribe-social a:hover {
+.subscribe-social a:hover,
+.subscribe-social a:active,
+.subscribe-social a:focus {
   background-color: var(--button-hover-bgc);
 }
 .subscribe-input {
+  margin-right: 12px;
   width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -372,16 +417,22 @@ footer .row > * {
 }
 .subscribe-link {
   align-items: center;
-  padding-left: 29px;
-  margin-left: 12px;
+  justify-content: center;
   height: 50px;
   width: 200px;
   color: var(--accent-text-color);
   background-color: var(--active-text-color);
-  background-image: url("../images/social/telegram.svg");
-  background-repeat: no-repeat;
-  background-position: 148px 50%;
   border-radius: 4px;
+}
+.subscribe-link:hover,
+.subscribe-link:focus,
+.subscribe-link:active {
+  transform: scale(1.05);
+  transition: 0.07s;
+  border: 1px solid #fff;
+}
+.subscribe-link .icon {
+  margin-left: 10px;
 }
 .copyrigths {
   text-align: center;
@@ -457,7 +508,7 @@ section.portfolio {
 section p {
   color: var(--primary-text-color);
   font-size: 18px;
-  line-height: 28px;
+  line-height: 1.56;
   // display: none;
 }
 .category {
